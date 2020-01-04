@@ -9,6 +9,7 @@
   justify-content: left;
   letter-spacing: 0.3em;
   margin-left: 1em;
+  margin-right: 15%;
 }
 
 .logo-red {
@@ -24,7 +25,55 @@
 }
 
 .scores {
-  margin-left: 25%;
+  
   display: flex;
   flex-direction: column;
+
+  animation-name: moveFromRight;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out; 
+}
+
+@keyframes moveFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
