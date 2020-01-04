@@ -1,0 +1,79 @@
+.answers {
+  display: flex;
+  flex-direction: column;
+
+  animation-name: moveFromBottom;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out; 
+}
+
+.answer {
+  padding: 10px;
+  font-size: 1.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 1em;
+  border: 1px solid gray;
+  background-color: ivory;
+}
+
+.answer:hover {
+  background-color:gray;
+  color: white;
+}
+
+@keyframes moveFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

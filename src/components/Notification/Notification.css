@@ -1,0 +1,87 @@
+.notification {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.message-box {
+  margin-left: 10%;  
+  margin-right: 10%;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0.1em;
+  animation-name: moveFromRight;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out; 
+}
+
+.play-button {
+  margin-top: 4em;
+  padding: 10px;
+  font-size: 1.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid gray;
+  background-color:rgba(255, 255, 255, 0.87);
+  transition-duration: 0.1s;
+  letter-spacing: 0.02em;
+  font-weight: lighter;
+
+  animation-name: moveFromLeft;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out; 
+}
+
+.play-button:hover {
+  background-color:gray;
+  color: white;
+}
+
+@keyframes moveFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveFromTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
